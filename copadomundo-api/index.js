@@ -2,7 +2,12 @@ import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import pool from './servico/conexao.js';
-import { retornaCopas, retornaCopasID, retornaCopasAno, retornaCopasTime } from './servico/retornaCopas_servico.js';
+import {
+    retornaCopas,
+    retornaCopasID,
+    retornaCopasAno,
+    retornaCopasTime
+} from './servico/retornaCopas_servico.js';
 
 const app = express();
 
@@ -22,19 +27,17 @@ app.get('/copas', async (req, res) => {
 
     if (time) {
         copas = await retornaCopasTime(time);
-
     } else if (ano) {
         copas = await retornaCopasAno(ano);
-
     } else {
         copas = await retornaCopas();
     }
 
     res.json(copas);
-
 });
 
-app.get('/copas/:id', async (req, res) =>{
+app.get('/copas/:id', async (req, res) => {
+
     const id = req.params.id;
     const copas = await retornaCopasID(id);
 
@@ -43,19 +46,23 @@ app.get('/copas/:id', async (req, res) =>{
     } else {
         res.status(404).json({ error: 'Copa não encontrada' });
     }
+
 });
 
 app.listen(9000, async () => {
 
-    const data = new Date();
+    console.log("Servidor Node iniciado!");
 
-    console.log("Servidor Node iniciado em: " + data);
+    try {
 
-    const conexao = await pool.getConnection();
+        await pool.query('SELECT NOW()');
 
-    console.log("Banco conectado!");
-    console.log("Thread:", conexao.threadId);
+        console.log("Banco PostgreSQL conectado!");
 
-    conexao.release();
+    } catch (erro) {
+
+        console.error("Erro ao conectar ao banco:", erro.message);
+
+    }
 
 });
