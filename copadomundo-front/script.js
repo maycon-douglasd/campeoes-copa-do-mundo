@@ -7,9 +7,11 @@ const campoCampeao = document.getElementById("campeao");
 
 const totalCopas = document.getElementById("totalCopas");
 
+const API = "https://campeoes-copa-do-mundo-api.onrender.com";
+
 carregarCopas();
 
-async function carregarCopas(url = "http://127.0.0.1:9000/copas") {
+async function carregarCopas(url = `${API}/copas`) {
 
     const resposta = await fetch(url);
 
@@ -20,16 +22,16 @@ async function carregarCopas(url = "http://127.0.0.1:9000/copas") {
 
     if (copas.length > 0) {
 
-    totalCopas.style.display = "inline-flex";
+        totalCopas.style.display = "inline-flex";
 
-    totalCopas.innerHTML =
-        `📊 ${copas.length} campeonato(s) encontrado(s).`;
+        totalCopas.innerHTML =
+            `📊 ${copas.length} campeonato(s) encontrado(s).`;
 
-} else {
+    } else {
 
-    totalCopas.style.display = "none";
+        totalCopas.style.display = "none";
 
-}
+    }
 
     tabela.innerHTML = "";
 
@@ -68,11 +70,11 @@ btnBuscar.addEventListener("click", () => {
 
     if (ano !== "") {
 
-        carregarCopas(`http://127.0.0.1:9000/copas?ano=${ano}`);
+        carregarCopas(`${API}/copas?ano=${ano}`);
 
     } else if (campeao !== "") {
 
-        carregarCopas(`http://127.0.0.1:9000/copas?time=${campeao}`);
+        carregarCopas(`${API}/copas?time=${campeao}`);
 
     } else {
 
