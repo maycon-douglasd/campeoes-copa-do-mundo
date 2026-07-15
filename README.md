@@ -1,93 +1,166 @@
-# 🏆 Campeões da Copa do Mundo
+# 🏆 Lista de Campeões da Copa do Mundo
 
-Aplicação **Full Stack** desenvolvida para consulta dos campeões da Copa do Mundo FIFA utilizando **HTML, CSS, JavaScript, Node.js, Express e MySQL**.
+<p align="center">
+  <img src="copadomundo-front/assets/images/banner.png" alt="Banner do projeto Lista de Campeões da Copa do Mundo" width="100%">
+</p>
 
-O projeto permite consultar todos os campeões da Copa do Mundo, realizar buscas por ano ou seleção campeã e consumir os dados através de uma API REST integrada a um banco de dados MySQL.
+<p align="center">
 
----
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel)
 
-## 📸 Demonstração
-
-### 💻 Versão Desktop
-
-![Versão Desktop](copadomundo-front/assets/screenshots/desktop.png)
-
-### 📱 Versão Mobile
-
-![Versão Mobile](copadomundo-front/assets/screenshots/mobile.png)
-
----
-
-## ✨ Funcionalidades
-
-- 🏆 Consulta de todos os campeões da Copa do Mundo
-- 🔎 Busca por ano
-- 🌎 Busca por seleção campeã
-- 📊 Contagem automática dos resultados encontrados
-- 📱 Interface responsiva para desktop e dispositivos móveis
-- ⚡ Consumo de API REST desenvolvida em Node.js
-- 🗄️ Integração com banco de dados MySQL
+</p>
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+# 📖 Sobre o projeto
 
-### Front-end
+Aplicação Full Stack desenvolvida para consultar todos os campeões da Copa do Mundo FIFA desde 1930.
+
+O projeto possui uma interface responsiva desenvolvida em HTML, CSS e JavaScript, consumindo uma API REST construída com Node.js e Express.
+
+Os dados são armazenados em um banco PostgreSQL hospedado no Supabase e a aplicação está publicada utilizando Vercel (Frontend) e Render (Backend).
+
+---
+
+# 🚀 Demonstração
+
+### 🌐 Front-end
+
+https://campeoes-copa-do-mundo.vercel.app
+
+### ⚡ API
+
+https://campeoes-copa-do-mundo-api.onrender.com/copas
+
+---
+
+# 📸 Interface
+
+## 💻 Desktop
+
+<p align="center">
+<img src="copadomundo-front/assets/images/desktop.png" width="90%">
+</p>
+
+---
+
+## 📱 Mobile
+
+<p align="center">
+<img src="copadomundo-front/assets/images/mobile.png" width="35%">
+</p>
+
+---
+
+# ✨ Funcionalidades
+
+- ✅ Listagem completa dos campeões da Copa do Mundo
+- ✅ Busca por ano
+- ✅ Busca por campeão
+- ✅ Contador de resultados encontrados
+- ✅ Mensagem quando não houver resultados
+- ✅ API REST
+- ✅ Interface responsiva
+- ✅ Banco PostgreSQL
+- ✅ Deploy em produção
+
+---
+
+# 🛠 Tecnologias Utilizadas
+
+## Front-end
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (ES6)
 
-### Back-end
+## Back-end
 
 - Node.js
-- Express
+- Express.js
 
-### Banco de Dados
+## Banco de Dados
 
-- MySQL
+- PostgreSQL
+- Supabase
 
-### Ferramentas
+## Deploy
 
-- Git
-- GitHub
-- Visual Studio Code
-- Live Server
 - Vercel
+- Render
 
 ---
 
-## 📂 Estrutura do Projeto
+# 📂 Estrutura do Projeto
 
 ```text
-campeoes-copa-do-mundo/
+copadomundo
 │
-├── copadomundo-api/
-│   ├── servico/
-│   │   ├── conexao.js
-│   │   └── retornaCopas_servico.js
-│   ├── .env.example
-│   ├── .gitignore
+├── copadomundo-api
+│   ├── servico
 │   ├── index.js
 │   ├── package.json
-│   └── package-lock.json
+│   └── .env.example
 │
-├── copadomundo-front/
-│   ├── assets/
-│   │   └── screenshots/
-│   ├── css/
-│   │   ├── style.css
-│   │   └── responsivo.css
+├── copadomundo-front
+│   ├── assets
+│   │   └── images
+│   │       ├── banner.png
+│   │       ├── desktop.png
+│   │       └── mobile.png
+│   │
+│   ├── css
 │   ├── index.html
 │   └── script.js
 │
-├── .gitignore
 └── README.md
 ```
 
 ---
 
-# ⚙️ Como executar o projeto
+# 🔗 Endpoints
+
+## Listar todas as Copas
+
+```http
+GET /copas
+```
+
+---
+
+## Buscar por Ano
+
+```http
+GET /copas?ano=2002
+```
+
+---
+
+## Buscar por Campeão
+
+```http
+GET /copas?time=Brasil
+```
+
+---
+
+## Buscar por ID
+
+```http
+GET /copas/1
+```
+
+---
+
+# ⚙ Como executar o projeto
 
 ## 1️⃣ Clone o repositório
 
@@ -97,174 +170,111 @@ git clone https://github.com/maycon-douglasd/campeoes-copa-do-mundo.git
 
 ---
 
-## 2️⃣ Acesse a pasta da API
+## 2️⃣ Entre na pasta do projeto
 
 ```bash
-cd campeoes-copa-do-mundo/copadomundo-api
+cd campeoes-copa-do-mundo
 ```
 
 ---
 
-## 3️⃣ Instale as dependências
+## 3️⃣ Backend
 
 ```bash
+cd copadomundo-api
+
 npm install
-```
 
----
-
-## 4️⃣ Configure as variáveis de ambiente
-
-Crie um arquivo chamado:
-
-```text
-.env
-```
-
-na pasta **copadomundo-api**.
-
-Você pode utilizar o arquivo `.env.example` como modelo.
-
-Configure as credenciais do seu banco de dados:
-
-```env
-DB_HOST=localhost
-DB_USER=seu_usuario
-DB_PASSWORD=sua_senha
-DB_NAME=copadomundo
-```
-
----
-
-## 5️⃣ Configure o banco de dados
-
-Crie um banco MySQL chamado:
-
-```text
-copadomundo
-```
-
-Em seguida, importe a tabela utilizada pelo projeto.
-
----
-
-## 6️⃣ Execute a API
-
-```bash
 npm start
 ```
 
-A API ficará disponível em:
+O servidor será iniciado em:
 
-```text
+```
 http://localhost:9000
 ```
 
 ---
 
-## 7️⃣ Execute o Front-end
+## 4️⃣ Frontend
 
-Abra o arquivo:
+Abra a pasta:
 
-```text
-copadomundo-front/index.html
+```
+copadomundo-front
 ```
 
-utilizando a extensão **Live Server** do Visual Studio Code.
+Depois execute utilizando a extensão **Live Server** do VS Code.
 
 ---
 
-# 📌 Endpoints da API
+# 🗄 Banco de Dados
 
-### Listar todas as Copas
+O projeto utiliza PostgreSQL hospedado no Supabase.
 
-```http
-GET /copas
-```
+A conexão é realizada através da variável de ambiente:
 
----
-
-### Buscar por ano
-
-```http
-GET /copas?ano=2002
+```env
+DATABASE_URL=sua_string_de_conexao
 ```
 
 ---
 
-### Buscar por campeão
+# 📚 Conceitos Praticados
 
-```http
-GET /copas?time=Brasil
-```
+Durante o desenvolvimento deste projeto foram aplicados conhecimentos em:
 
----
-
-# 🌐 Demonstração Online
-
-A interface da aplicação está disponível em:
-
-## https://campeoes-copa-do-mundo.vercel.app
-
-> **Observação:** A demonstração online apresenta apenas a interface da aplicação. Como a API depende de um banco de dados MySQL local, as consultas funcionam apenas executando o projeto localmente.
-
-### ▶️ Executando localmente
-
-1. Inicie o serviço do **MySQL**.
-
-2. Abra um terminal na pasta da API:
-
-```bash
-cd copadomundo-api
-```
-
-3. Instale as dependências (caso ainda não tenha feito):
-
-```bash
-npm install
-```
-
-4. Execute a API:
-
-```bash
-npm start
-```
-
-5. Abra a pasta **copadomundo-front** no Visual Studio Code.
-
-6. Execute o arquivo **index.html** utilizando a extensão **Live Server**.
-
-Após esses passos, todas as funcionalidades da aplicação estarão disponíveis.
+- HTML semântico
+- CSS Responsivo
+- Flexbox
+- JavaScript ES6
+- Fetch API
+- Async / Await
+- Node.js
+- Express
+- Middleware
+- PostgreSQL
+- Supabase
+- Deploy de APIs
+- Deploy Front-end
+- Consumo de APIs REST
+- Organização de projetos Full Stack
+- Versionamento com Git
+- GitHub
 
 ---
 
-# 🎯 Objetivo do Projeto
+# 📈 Melhorias Futuras
 
-Este projeto foi desenvolvido para praticar conceitos fundamentais do desenvolvimento Full Stack, incluindo:
-
-- Desenvolvimento de APIs REST
-- Integração entre Front-end e Back-end
-- Consumo de APIs utilizando Fetch API
-- Comunicação com banco de dados MySQL
-- Organização de projetos em arquitetura cliente/servidor
-- Desenvolvimento de interfaces responsivas
-- Utilização de variáveis de ambiente com dotenv
-- Versionamento de código utilizando Git e GitHub
+- Login de usuários
+- Histórico de pesquisas
+- Estatísticas das seleções
+- Filtro por continente
+- Dark Mode
+- Testes automatizados
+- Docker
+- CI/CD
 
 ---
 
 # 👨‍💻 Autor
 
-**Maycon Douglas**
+## Maycon Douglas Duarte de Sena
 
-Desenvolvedor Front-end em transição para Full Stack, desenvolvendo projetos para praticar tecnologias modernas e fortalecer seu portfólio.
+Desenvolvedor Front-end | JavaScript | Node.js
 
-GitHub:
+### GitHub
 
 https://github.com/maycon-douglasd
 
+### LinkedIn
+
+Adicione aqui o link do seu LinkedIn.
+
 ---
 
-# 📄 Licença
+# ⭐ Gostou do projeto?
 
-Este projeto foi desenvolvido exclusivamente para fins de estudo, prática e composição de portfólio.
+Se este projeto foi útil para você, deixe uma ⭐ no repositório.
+
+Isso ajuda bastante a divulgar o projeto e incentiva novos desenvolvimentos.
