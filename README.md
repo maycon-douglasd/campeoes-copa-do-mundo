@@ -261,7 +261,7 @@ Durante o desenvolvimento deste projeto foram aplicados conhecimentos em:
 
 ## Maycon Douglas Duarte de Sena
 
-Desenvolvedor Front-end | JavaScript | Node.js
+Desenvolvedor Front-end & Mobile | React Native | React.js | TypeScript | JavaScript | Node.js | APIs REST | MySQL |UI Responsiva
 
 ### GitHub
 
