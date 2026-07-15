@@ -1,0 +1,137 @@
+@media (max-width:992px){
+
+    body{
+        padding:25px;
+    }
+
+    main{
+        padding:25px;
+    }
+
+    .cabecalho-texto h1{
+        font-size:2.5rem;
+    }
+
+    .cabecalho-texto p{
+        font-size:1rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    main{
+        padding:20px;
+    }
+
+    header{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:18px;
+        margin-bottom:30px;
+    }
+
+    .logo{
+        display:none;
+    }
+
+    .cabecalho-texto{
+        align-items:center;
+    }
+
+    .cabecalho-texto h1{
+        font-size:2.2rem;
+        line-height:1.2;
+    }
+
+    .cabecalho-texto p{
+        max-width:320px;
+        margin-top:10px;
+        font-size:1rem;
+        line-height:1.6;
+    }
+
+    .cabecalho-texto::after{
+        margin:18px auto 0;
+    }
+
+    .filtros{
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .campo{
+        width:100%;
+    }
+
+    .campo input{
+        width:100%;
+    }
+
+    .botoes{
+        width:100%;
+        gap:10px;
+    }
+
+    .botoes button{
+        flex:1;
+    }
+
+    #totalCopas{
+        width:100%;
+        justify-content:center;
+    }
+
+    table{
+        font-size:14px;
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    th,
+    td{
+        padding:12px 10px;
+    }
+
+
+    footer{
+        font-size:14px;
+        line-height:1.6;
+    }
+
+}
+
+@media (max-width:430px){
+
+    body{
+        padding:10px;
+    }
+
+    main{
+        padding:15px;
+    }
+
+    .cabecalho-texto h1{
+        font-size:1.9rem;
+    }
+
+    .cabecalho-texto p{
+        max-width:260px;
+        font-size:.95rem;
+    }
+
+    .botoes{
+        flex-direction:column;
+    }
+
+    .botoes button{
+        width:100%;
+    }
+
+}

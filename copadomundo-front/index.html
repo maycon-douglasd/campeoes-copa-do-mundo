@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsivo.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <title>Campeões da Copa do Mundo</title>
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+
+            <div class="logo">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+
+            <div class="cabecalho-texto">
+
+                <h1>Lista de Campeões da Copa do Mundo</h1>
+
+                <p id="descricao">
+                    Consulte todos os campeões da Copa do Mundo desde 1930.
+                </p>
+
+            </div>
+
+        </header>
+
+        <section class="filtros">
+
+            <div class="campo">
+
+                <label for="ano">Ano</label>
+
+                <input type="number" id="ano" placeholder="Ex.: 2002">
+
+            </div>
+
+            <div class="campo">
+
+                <label for="campeao">Campeão</label>
+
+                <input type="text" id="campeao" placeholder="Ex.: Brasil">
+
+            </div>
+
+            <div class="botoes">
+
+                <button id="btnBuscar">
+                    Buscar
+                </button>
+
+                <button id="btnLimpar">
+                    Limpar
+                </button>
+
+            </div>
+
+        </section>
+
+        <p id="totalCopas"></p>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Ano</th>
+                    <th>Campeão</th>
+                    <th>Vice-campeão</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tabela-copas">
+
+
+            </tbody>
+
+        </table>
+
+        <footer>
+
+            Desenvolvido por <strong>Maycon Douglas</strong>
+
+            <span>•</span>
+
+            Projeto desenvolvido com HTML, CSS, JavaScript, Node.js, Express e MySQL.
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
