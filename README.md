@@ -269,7 +269,7 @@ https://github.com/maycon-douglasd
 
 ### LinkedIn
 
-Adicione aqui o link do seu LinkedIn.
+https://www.linkedin.com/in/maycon-douglasds/
 
 ---
 
